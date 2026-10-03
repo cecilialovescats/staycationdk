@@ -1,4 +1,4 @@
-/* Include padding and borders in element widths */
+
 * {
   box-sizing: border-box;
 }
@@ -15,7 +15,6 @@ body {
   line-height: 1.6;
 }
 
-/* Header and navigation */
 header {
   display: flex;
   justify-content: space-between;
@@ -49,7 +48,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Main sections */
+
 main > section {
   padding: 50px 6%;
 }
@@ -78,7 +77,6 @@ p {
   max-width: 700px;
 }
 
-/* Introduction */
 main > section:first-child {
   padding-top: 70px;
   padding-bottom: 70px;
@@ -99,7 +97,6 @@ main > section:first-child > a:hover {
   background-color: #d2e9c4;
 }
 
-/* Destination list */
 #destinationer ul {
   display: flex;
   flex-wrap: wrap;
@@ -113,7 +110,6 @@ main > section:first-child > a:hover {
   background-color: #d2e9c4;
 }
 
-/* Experience cards */
 #oplevelser {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -134,12 +130,12 @@ article h3 {
   margin-top: 0;
 }
 
-/* About section */
+
 #om-os {
   background-color: #eef4e7;
 }
 
-/* Footer */
+
 footer {
   padding: 25px 6%;
   background-color: #c4ee9e;
@@ -147,13 +143,13 @@ footer {
   font-size: 14px;
 }
 
-/* Visible keyboard focus */
+
 a:focus-visible {
   outline: 3px solid #476a39;
   outline-offset: 5px;
 }
 
-/* Layout for smaller screens */
+
 @media (max-width: 700px) {
   header {
     flex-direction: column;
