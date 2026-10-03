@@ -148,7 +148,21 @@ a:focus-visible {
   outline: 3px solid #476a39;
   outline-offset: 5px;
 }
+.cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+}
 
+.card {
+  background-color: lightblue;
+  width: 320px;
+  padding: 20px;
+}
+
+.card img {
+  width: 100%;
+}
 
 @media (max-width: 700px) {
   header {
