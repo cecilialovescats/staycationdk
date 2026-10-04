@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="destination.css">
+  <title>Tæt på DK</title>
+</head>
 
+<body>
+
+  <header>
+    <a href="index.html">Tæt på DK</a>
+
+    <nav>
+      <a href="index.html">Forside</a>
+      <a href="destinationer.html">Destinationer</a>
+      <a href="oplevelser.html">Oplevelser</a>
+      <a href="om-os.html">Om os</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Dit Hjem:</h2>
+        <h1>Brande</h1>
+      </div>
+    </section>
+    <section class="cards">
+
+      <div class="card">
+        <img src="ballet.jpg" alt="Nøddeknækkeren">
+        <h2>Nøddeknækkeren</h2>
+        <p>
+          Rejsetid: 1 time<br>
+          Fra 210 dkk
+        </p>
+        <button>Se mere</button>
+      </div>
+
+
+      <div class="card">
+        <img src="kayak2.jpg" alt="Kajak">
+        <h2>Kajak</h2>
+        <p>
+          Rejsetid: 40 minutter<br>
+          Fra 450 dkk
+        </p>
+        <button>Se mere</button>
+      </div>
+
+      <div class="card">
+        <img src="randers-fjord-stien.jpg" alt="Randers Fjord">
+        <h2>Randers Fjord</h2>
+        <p>
+          Rejsetid: 1,5 timer<br>
+          Gratis
+        </p>
+        <button>Se mere</button>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
