@@ -190,393 +190,94 @@ a:focus-visible {
   box-sizing: border-box;
 }
 
-.search-box {
+/* =========================
+   SEARCH / FILTER BAR
+========================= */
+
+.search-panel {
+  position: relative;
   width: 100%;
-  min-height: 140px;
-
-  background: #ccd8e5;
-  padding: 12px 25px 18px;
-
-  display: grid;
-
-  grid-template-columns:
-    1.2fr
-    1.2fr
-    0.6fr
-    90px;
-
-  grid-template-areas:
-    "where when people search"
-    "travel travel people search";
-
-  column-gap: 60px;
-
-  align-items: center;
+  height: 140px;
+  background: #cbd7e4;
+  color: #555;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 
 /* WHERE */
 
-.where {
-  grid-area: where;
-}
-
-
-/* WHEN */
-
-.when {
-  grid-area: when;
-}
-
-
-/* LABELS */
-
-.where,
-.when {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.where label,
-.when label {
-  font-size: 11px;
-  color: #555;
-}
-
-
-/* TEXT + DATE INPUT */
-
-.where input,
-.when input {
-  height: 28px;
-
-  border: none;
-  outline: none;
-
-  border-radius: 12px;
-
-  padding: 0 12px;
-
-  background: rgba(255, 255, 255, 0.6);
-
-  font-size: 10px;
-}
-
-
-/* TRAVEL */
-
-.travel {
-  grid-area: travel;
-
-  width: 65%;
-  justify-self: center;
-
-  text-align: center;
-}
-
-.travel > label {
-  display: block;
-
-  font-size: 17px;
-  color: #555;
-
-  margin-bottom: 5px;
-}
-
-
-/* RANGE */
-
-.travel input[type="range"] {
-  appearance: none;
-  -webkit-appearance: none;
-
-  display: block;
-  width: 100%;
-  height: 2px;
-
-  background: #fff;
-
-  margin: 0;
-}
-
-
-/* CIRCLE ON RANGE */
-
-.travel input[type="range"]::-webkit-slider-thumb {
-  appearance: none;
-  -webkit-appearance: none;
-
-  width: 11px;
-  height: 11px;
-
-  border-radius: 50%;
-  background: #f5f5eb;
-
-  cursor: pointer;
-}
-
-
-/* TIME LABELS */
-
-.times {
-  display: flex;
-  justify-content: space-between;
-
-  margin-top: 5px;
-
-  color: #f3f7df;
-  font-size: 15px;
-}
-
-
-/* PEOPLE */
-
-.people {
-  grid-area: people;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 5px;
-}
-
-.people img {
-  width: 30px;
-  height: 42px;
-  object-fit: contain;
-}
-
-.people > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.people label {
-  font-size: 8px;
-  color: #555;
-}
-
-.people input {
-  width: 32px;
-
-  border: none;
-  outline: none;
-
-  background: transparent;
-
-  text-align: center;
-
-  font-size: 16px;
-  color: #555;
-}
-
-
-/* remove number input arrows */
-
-.people input::-webkit-inner-spin-button,
-.people input::-webkit-outer-spin-button {
-  appearance: none;
-  margin: 0;
-}
-
-
-/* SEARCH BUTTON */
-
-.search-button {
-  grid-area: search;
-
-  width: 55px;
-  height: 55px;
-
-  border: none;
-  border-radius: 50%;
-
-  background: rgba(255, 255, 255, 0.55);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  cursor: pointer;
-}
-
-
-/* MAGNIFYING GLASS */
-
-.magnifying-glass {
-  width: 27px;
-  height: 27px;
-
-  border: 3px solid #aaa;
-  border-radius: 50%;
-
-  position: relative;
-}
-
-.magnifying-glass::after {
-  content: "";
-
-  position: absolute;
-
-  width: 14px;
-  height: 3px;
-
-  background: #aaa;
-
-  right: -11px;
-  bottom: -6px;
-
-  transform: rotate(45deg);
-}
-
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-  * {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-
-/* =====================================
-   WHOLE BLUE SECTION
-===================================== */
-
-.search-panel {
-  position: relative;
-
-  width: 100%;
-  height: 140px;
-
-  background: #cbd7e4;
-
-  color: #555;
-}
-
-
-/* =====================================
-   LOCATION
-===================================== */
-
 .location-box {
   position: absolute;
-
   left: 2.5%;
   top: 10px;
-
   width: 18%;
 }
 
-.location-box label {
+.location-box label,
+.date-box label {
   display: block;
-
   margin-left: 4px;
-  margin-bottom: 4px;
-
+  margin-bottom: 3px;
   font-size: 10px;
+  line-height: 1;
   color: #555;
 }
 
-.location-box input {
+.location-box input,
+.date-box input {
+  display: block;
   width: 100%;
   height: 27px;
 
-  border: none;
-  outline: none;
-
-  border-radius: 13px;
-
-  background: rgba(255, 255, 255, 0.58);
-
   padding: 0 12px;
 
+  border: 0;
+  outline: 0;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.6);
+
+  font-family: Arial, sans-serif;
   font-size: 8px;
   color: #555;
 }
 
-.location-box input::placeholder {
-  color: #777;
-}
 
-
-/* =====================================
-   DATE
-===================================== */
+/* DATE */
 
 .date-box {
   position: absolute;
-
   left: 40%;
   top: 10px;
-
   width: 21%;
 }
 
-.date-box label {
-  display: block;
 
-  margin-left: 4px;
-  margin-bottom: 4px;
-
-  font-size: 10px;
-  color: #555;
-}
-
-.date-box input {
-  width: 100%;
-  height: 27px;
-
-  border: none;
-  outline: none;
-
-  border-radius: 13px;
-
-  background: rgba(255, 255, 255, 0.58);
-
-  padding: 0 12px;
-
-  font-size: 8px;
-  color: #555;
-}
-
-.date-box input::placeholder {
-  color: #777;
-}
-
-
-/* =====================================
-   TRAVEL SLIDER
-===================================== */
+/* =========================
+   TRAVEL TIME
+========================= */
 
 .travel-box {
   position: absolute;
 
   left: 9%;
-  top: 64px;
+  top: 62px;
 
   width: 41%;
 }
 
 .travel-title {
+  margin-bottom: 5px;
+
   text-align: center;
 
   font-size: 15px;
-  font-weight: 400;
-
-  margin-bottom: 5px;
+  line-height: 1;
+  color: #555;
 }
 
 
-/* RANGE TRACK */
+/* slider */
 
 .travel-box input[type="range"] {
   display: block;
@@ -589,49 +290,42 @@ body {
   appearance: none;
   -webkit-appearance: none;
 
-  border: none;
-  outline: none;
+  border: 0;
+  outline: 0;
 
   background: #f4f7e9;
 }
 
 
-/* Chrome / Safari thumb */
+/* slider circle */
 
 .travel-box input[type="range"]::-webkit-slider-thumb {
-  appearance: none;
-  -webkit-appearance: none;
-
   width: 10px;
   height: 10px;
 
+  appearance: none;
+  -webkit-appearance: none;
+
+  border: 0;
   border-radius: 50%;
 
-  border: none;
-
-  background: #f2f3e8;
+  background: #f5f5eb;
 
   cursor: pointer;
 }
-
-
-/* Firefox thumb */
 
 .travel-box input[type="range"]::-moz-range-thumb {
   width: 10px;
   height: 10px;
 
+  border: 0;
   border-radius: 50%;
 
-  border: none;
-
-  background: #f2f3e8;
-
-  cursor: pointer;
+  background: #f5f5eb;
 }
 
 
-/* TIME LABELS */
+/* 30m / 1h / etc */
 
 .time-labels {
   display: flex;
@@ -640,29 +334,32 @@ body {
   padding: 5px 16px 0;
 
   font-size: 14px;
+  line-height: 1;
 
-  color: #eff6dd;
+  color: #f3f7df;
 }
 
 
-/* =====================================
-   PERSON AREA
-===================================== */
+/* =========================
+   PERSON
+========================= */
 
 .person-box {
   position: absolute;
 
-  left: 61%;
-  top: 63px;
+  left: 61.5%;
+  top: 58px;
 
-  width: 70px;
+  width: 75px;
 }
 
 .person-label {
-  margin-left: 15px;
-  margin-bottom: -1px;
+  margin-left: 12px;
+  margin-bottom: 0;
 
   font-size: 7px;
+  line-height: 1;
+
   color: #666;
 }
 
@@ -672,11 +369,13 @@ body {
 }
 
 
-/* YOUR TRANSPARENT PERSON PNG */
+/* your transparent PNG */
 
 .person-icon {
+  display: block;
+
   width: 28px;
-  height: 37px;
+  height: 38px;
 
   object-fit: contain;
 
@@ -685,13 +384,15 @@ body {
 }
 
 
-/* =====================================
-   STAR
-===================================== */
+/* star */
 
 .star {
-  width: 35px;
-  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
 
   margin-left: -3px;
 
@@ -709,33 +410,26 @@ body {
     2% 35%,
     39% 35%
   );
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 
-/* NUMBER INSIDE STAR */
+/* number inside star */
 
 .star input {
-  width: 22px;
+  width: 20px;
 
   padding: 0;
 
-  border: none;
-  outline: none;
+  border: 0;
+  outline: 0;
 
   background: transparent;
 
-  text-align: center;
-
+  font-family: Arial, sans-serif;
   font-size: 14px;
+  text-align: center;
   color: #555;
 }
-
-
-/* remove number arrows */
 
 .star input::-webkit-inner-spin-button,
 .star input::-webkit-outer-spin-button {
@@ -748,9 +442,9 @@ body {
 }
 
 
-/* =====================================
-   SEARCH CIRCLE
-===================================== */
+/* =========================
+   SEARCH BUTTON
+========================= */
 
 .search-button {
   position: absolute;
@@ -758,12 +452,12 @@ body {
   right: 5.7%;
   top: 24px;
 
-  width: 52px;
-  height: 52px;
+  width: 55px;
+  height: 55px;
 
   padding: 0;
 
-  border: none;
+  border: 0;
   border-radius: 50%;
 
   background: rgba(255, 255, 255, 0.55);
@@ -772,23 +466,20 @@ body {
 }
 
 
-/* MAGNIFYING GLASS */
+/* magnifying glass */
 
 .search-icon {
   position: absolute;
 
-  width: 25px;
-  height: 25px;
-
   left: 12px;
   top: 10px;
+
+  width: 26px;
+  height: 26px;
 
   border: 3px solid #aaa;
   border-radius: 50%;
 }
-
-
-/* handle */
 
 .search-icon::after {
   content: "";
@@ -801,18 +492,18 @@ body {
   right: -11px;
   bottom: -7px;
 
-  background: #aaa;
-
   border-radius: 2px;
+
+  background: #aaa;
 
   transform: rotate(45deg);
   transform-origin: left center;
 }
 
 
-/* =====================================
-   RESPONSIVE
-===================================== */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 700px) {
 
@@ -839,12 +530,33 @@ body {
   }
 
   .person-box {
-    left: 35%;
+    left: 30%;
     top: 175px;
   }
 
   .search-button {
     right: 30%;
+    top: 180px;
+  }
+}
+
+ 
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+ 
+  
+;
     top: 180px;
   }
 }
