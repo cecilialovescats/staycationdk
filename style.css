@@ -474,7 +474,7 @@ a:focus-visible {
 @media (max-width: 700px) {
 
   .search-panel {
-    height: 300px;
+    height: 400px;
   }
 
   .location-box {
@@ -507,7 +507,7 @@ a:focus-visible {
 }
 .hero {
   width: 100%;
-  height: 600px;
+  height: 500px;
 
   background-image: url("coast2.png");
   background-size: cover;
@@ -520,7 +520,7 @@ a:focus-visible {
 }
 
 .hero-text {
-  text-align: center;
+  text-align: left;
   color: white;
 }
 
@@ -532,22 +532,7 @@ a:focus-visible {
 .hero p {
   font-size: 24px;
 }
- 
-
-  
-  
-
-
-
-
-
-
-
-
-
-
- 
-  
+   
 ;
     top: 180px;
   }
