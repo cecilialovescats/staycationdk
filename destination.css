@@ -155,56 +155,6 @@ main > section:first-child > a:hover {
 }
 
 
-
-#destinationer ul {
-  display: flex;
-  flex-wrap: wrap;
-
-  gap: 20px;
-
-  padding: 0;
-
-  list-style: none;
-}
-
-#destinationer li {
-  padding: 20px 35px;
-
-  background-color: #d2e9c4;
-}
-
-
-
-#oplevelser {
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 25px;
-}
-
-#oplevelser > h2 {
-  grid-column: 1 / -1;
-
-  margin-top: 0;
-}
-
-article {
-  padding: 25px;
-
-  background-color: #d8e9ed;
-}
-
-article h3 {
-  margin-top: 0;
-}
-
-
-#om-os {
-  background-color: #eef4e7;
-}
-
-
 .cards {
   display: flex;
   justify-content: space-around;
@@ -265,10 +215,6 @@ a:focus-visible {
 
   main > section {
     padding: 35px 6%;
-  }
-
-  #oplevelser {
-    grid-template-columns: 1fr;
   }
 
   .cards {
