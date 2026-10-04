@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <title>Tæt på DK</title>
-</head>
-<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Tæt på DK</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
   <header>
-    <a href="index.html">Tæt på DK</a>
+
+    <a class="logo" href="index.html">
+      Tæt på DK
+    </a>
 
     <nav>
       <a href="index.html">Forside</a>
@@ -17,153 +23,197 @@
       <a href="oplevelser.html">Oplevelser</a>
       <a href="om-os.html">Om os</a>
     </nav>
+
   </header>
-
-  <main>
+<main>
     <section class="hero">
-  <div class="hero-text">
-      <h1>Oplev mere. Tættere på.</h1>
-      <h2>Fri i weekenden? Udforsk Danmark</h2>
-      <p>
-        Find nye oplevelser, aktiviteter og steder tæt på dig. Vi hjælper dig med at opdage Danmark  fra små lokale eventyr til din næste ferie, lige i nærheden.
-      </p>
+
+      <div class="hero-text">
+        <h1>Oplev mere. Tættere på.</h1>
+        <h2>
+          Fri i weekenden? Udforsk Danmark
+        </h2>
+        <p>
+          Find nye oplevelser, aktiviteter og steder tæt på dig.
+          Vi hjælper dig med at opdage Danmark – fra små lokale
+          eventyr til din næste ferie, lige i nærheden.
+        </p>
+
+      </div>
     </section>
-  </div> 
-<div class="search-panel">
+    <section class="search-panel">
 
-  <div class="location-box">
-    <label for="location">Hvor bor du :)</label>
-    <input
-      id="location"
-      type="text"
-      placeholder="skriv by eller postnummer"
-    >
-  </div>
+      <div class="location-box">
 
-
-  <div class="date-box">
-    <label for="date">Hvornår</label>
-    <input
-      id="date"
-      type="text"
-      placeholder="mm/dd/yyyy"
-    >
-  </div>
-
-
-  <div class="travel-box">
-
-    <div class="travel-title">
-      hvor lang tid vil du rejse
-    </div>
-
-    <input
-      id="travelTime"
-      type="range"
-      min="0"
-      max="4"
-      step="1"
-      value="1"
-    >
-
-    <div class="time-labels">
-      <span>30m</span>
-      <span>1h</span>
-      <span>2h</span>
-      <span>3h</span>
-      <span>3h+</span>
-    </div>
-
-  </div>
-
-
-  <div class="person-box">
-
-    <div class="person-label">person</div>
-
-    <div class="person-row">
-
-      <img src="guy.png"
-      class="person-icon"
-      alt=""
-      >
-
-      <div class="star">
+        <label for="location">
+          Hvor bor du :)
+        </label>
         <input
-          id="persons"
-          type="number"
-          value="1"
-          min="1"
-          max="99"
+          id="location"
+          name="location"
+          type="text"
+          placeholder="skriv by eller postnummer">
+
+      </div>
+      <div class="date-box">
+
+        <label for="date">
+          Hvornår
+        </label>
+
+        <input
+          id="date"
+          name="date"
+          type="date">
+
+      </div>
+      <div class="travel-box">
+
+        <label
+          class="travel-title"
+          for="travelTime"
         >
+          hvor lang tid vil du rejse
+        </label>
+
+        <input
+          id="travelTime"
+          name="travelTime"
+          type="range"
+          min="0"
+          max="4"
+          step="1"
+          value="1"
+        >
+
+        <div class="time-labels">
+          <span>30m</span>
+          <span>1h</span>
+          <span>2h</span>
+          <span>3h</span>
+          <span>3h+</span>
+        </div>
+
+      </div>
+      <div class="person-box">
+
+        <label
+          class="person-label"
+          for="persons"
+        >
+          person
+        </label>
+        <div class="person-row">
+          <img src="guy.png" class="person-icon" alt="">
+
+          <div class="star">
+
+            <input
+              id="persons"
+              name="persons"
+              type="number"
+              value="1"
+              min="1"
+              max="99"
+              aria-label="Antal personer"
+            >
+          </div>
+
+        </div>
+
+      </div>
+      <button
+        class="search-button"
+        type="button"
+        aria-label="Søg">
+        <span class="search-icon"></span>
+      </button>
+    </section>
+    <section id="destinationer">
+      <h2>Destinationer</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="kayak.jpg" alt="Kajak i Silkeborg">
+          <h3>Silkeborg</h3>
+
+        </article>
+        <article class="card">
+          <img src="legoland.jpg" alt="Legoland i Billund">
+          <h3>Billund</h3>
+        </article>
+        <article class="card">
+          <img src="deer.jpg" alt="Hjorte i Aarhus">
+          <h3>Aarhus</h3>
+        </article>
+        <article class="card">
+          <img src="summerhus.jpg" alt="Sommerhus i Aalborg">
+          <h3>Aalborg</h3>
+        </article>
+        <article class="card">
+          <img src="saunagus.jpg" alt="Saunagus i København">
+          <h3>København</h3>
+        </article>
+        <article class="card">
+
+          <img src="mns.png"
+            alt="Møns Klint"
+          >
+          <h3>Møns Klint</h3>
+        </article>
+
       </div>
 
-    </div>
+    </section>
 
-  </div>
-
-
-  <button class="search-button" type="button">
-    <span class="search-icon"></span>
-  </button>
-
-</div>
-
-</div>
-    <section id="destinationer">
-    <h2>Destinationer</h2>
-  <div class="cards">
-    <div class="card">
-      <img src="kayak.jpg" alt="kajak i silkeborg">
-      <h2>Silkeborg</h2>
-    </div>
-        <div class="cards">
-    <div class="card">
-      <img src="legoland.jpg" alt="legoland i Billund">
-      <h2>Billund</h2>
-    </div>
-        <div class="cards">
-    <div class="card">
-      <img src="deer.jpg" alt="Deer I Aarhus">
-      <h2>Aarhus</h2>
-    </div>
-    <div class="cards">
-    <div class="card">
-      <img src="summerhus.jpg" alt="Sommerhus I Aalborg">
-      <h2>Aalborg</h2>
-        <div class="cards">
-    </div>
-    <div class="card">
-      <img src="saunagus.jpg" alt="saunagus i København">
-      <h2>København</h2>
-    </div>
-    <div class="card">
-      <img src="mns.png" alt="">
-      <h2>møn klint</h2>
-    </div> 
-    </div>
-   </section>
     <section id="om-os">
+
       <h2>Om Tæt på DK</h2>
+
       <p>
         Vi hjælper dig med at finde oplevelser tæt på hjemmet,
         så du kan opdage mere af Danmark.
       </p>
+
     </section>
   </main>
-
   <footer>
-    <p>&copy; 2026 Tæt på DK</p>
-    <p>tilmeld nyhedbrev</p>
-     <input
-      id="location"
-      type="text"
-      placeholder="din email"
-    >
-    <p>Om os</p>
-    <p>Spørngmål</p>
-    
+
+    <div class="footer-content">
+
+      <div>
+        <p>&copy; 2026 Tæt på DK</p>
+      </div>
+
+      <div>
+
+        <p>Tilmeld nyhedsbrev</p>
+
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="din email"
+        >
+
+      </div>
+
+      <div class="footer-links">
+
+        <a href="om-os.html">
+          Om os
+        </a>
+
+        <a href="#">
+          Spørgsmål
+        </a>
+
+      </div>
+
+    </div>
+
   </footer>
 
+
 </body>
+
 </html>
