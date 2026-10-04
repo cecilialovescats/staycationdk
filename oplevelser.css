@@ -1,68 +1,166 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="destination.css">
-  <title>Tæt på DK</title>
-</head>
 
-<body>
+* {
+  box-sizing: border-box;
+}
 
-  <header>
-    <a href="index.html">Tæt på DK</a>
+html {
+  scroll-behavior: smooth;
+}
 
-    <nav>
-      <a href="index.html">Forside</a>
-      <a href="destinationer.html">Destinationer</a>
-      <a href="oplevelser.html">Oplevelser</a>
-      <a href="om-os.html">Om os</a>
-    </nav>
-  </header>
-
-  <main>
-
-    <section class="hero">
-      <div class="hero-text">
-        <h2>Dit Hjem:</h2>
-        <h1>Brande</h1>
-      </div>
-    </section>
-    <section class="cards">
-
-      <div class="card">
-        <img src="ballet.jpg" alt="Nøddeknækkeren">
-        <h2>Nøddeknækkeren</h2>
-        <p>
-          Rejsetid: 1 time<br>
-          Fra 210 dkk
-        </p>
-        <button>Se mere</button>
-      </div>
+body {
+  margin: 0;
+  background-color: #fffde3;
+  color: #29342a;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+}
 
 
-      <div class="card">
-        <img src="kayak2.jpg" alt="Kajak">
-        <h2>Kajak</h2>
-        <p>
-          Rejsetid: 40 minutter<br>
-          Fra 450 dkk
-        </p>
-        <button>Se mere</button>
-      </div>
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 
-      <div class="card">
-        <img src="randers-fjord-stien.jpg" alt="Randers Fjord">
-        <h2>Randers Fjord</h2>
-        <p>
-          Rejsetid: 1,5 timer<br>
-          Gratis
-        </p>
-        <button>Se mere</button>
-      </div>
-    </section>
+  padding: 20px 6%;
 
-  </main>
+  background-color: #d2e9c4;
+}
 
-</body>
-</html>
+header > a {
+  color: #29342a;
+  font-family: "Courier New", monospace;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+nav a {
+  color: #29342a;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+
+main > section {
+  padding: 50px 6%;
+}
+
+
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  font-weight: normal;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p {
+  max-width: 700px;
+}
+
+
+
+
+
+main > section:first-child {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  background-color: #b8cbb0;
+}
+
+main > section:first-child > a {
+  display: inline-block;
+
+  margin-top: 15px;
+  padding: 12px 24px;
+
+  border-radius: 25px;
+
+  background-color: #fffde3;
+  color: #29342a;
+
+  text-decoration: none;
+}
+
+main > section:first-child > a:hover {
+  background-color: #d2e9c4;
+}
+
+
+
+#om-os {
+  background-color: #eef4e7;
+}
+
+
+
+
+footer {
+  padding: 25px 6%;
+
+  background-color: #c4ee9e;
+
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+}
+
+
+
+a:focus-visible {
+  outline: 3px solid #476a39;
+  outline-offset: 5px;
+}
+
+
+
+@media (max-width: 400px) {
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  main > section {
+    padding: 35px 6%;
+  }
+
+.my-photo {
+  width: 200px;
+  height: 50px;
+  object-fit: contain;
+}
