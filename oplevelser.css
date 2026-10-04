@@ -119,7 +119,55 @@ main > section:first-child > a:hover {
   background-color: #eef4e7;
 }
 
+.travel-time {
+  width: 450px;
+  min-height: 400px;
+  padding: 30px 60px;
 
+  background-color: #d2e9c4;
+
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.travel-location {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.travel-location label {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+
+.travel-location input {
+  width: 200px;
+  padding: 10px;
+
+  border: 1px solid #29342a;
+  border-radius: 5px;
+
+  font-size: 16px;
+}
+
+.transport {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.transport-icon {
+  width: 60px;
+  font-size: 48px;
+  text-align: center;
+}
+
+.travel-result {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
 
 
 footer {
