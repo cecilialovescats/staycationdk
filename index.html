@@ -28,7 +28,65 @@
       </p>
       <a href="#oplevelser">Se oplevelser</a>
     </section>
+<div class="search-box">
 
+  <div class="where">
+    <label for="location">Hvor bor du :)</label>
+    <input
+      type="text"
+      id="location"
+      placeholder="skriv by eller postnummer"
+    >
+  </div>
+
+  <div class="when">
+    <label for="date">Hvornår</label>
+    <input
+      type="date"
+      id="date"
+    >
+  </div>
+
+  <div class="travel">
+    <label for="travelTime">hvor lang tid vil du rejse</label>
+
+    <input
+      type="range"
+      id="travelTime"
+      min="0"
+      max="4"
+      value="1"
+      step="1"
+    >
+
+    <div class="times">
+      <span>30m</span>
+      <span>1h</span>
+      <span>2h</span>
+      <span>3h</span>
+      <span>3h+</span>
+    </div>
+  </div>
+
+  <div class="people">
+    <img src="person.png" alt="Person">
+
+    <div>
+      <label for="persons">person</label>
+      <input
+        type="number"
+        id="persons"
+        value="1"
+        min="1"
+        max="10"
+      >
+    </div>
+  </div>
+  <button class="search-button" type="button">
+    <span class="magnifying-glass"></span>
+  </button>
+
+</div>
     <section id="destinationer">
       <h2>Destinationer</h2>
       <p>Find inspiration til din næste tur.</p>
