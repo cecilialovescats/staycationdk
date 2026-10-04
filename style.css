@@ -190,9 +190,7 @@ a:focus-visible {
   box-sizing: border-box;
 }
 
-/* =========================
-   SEARCH / FILTER BAR
-========================= */
+
 
 .search-panel {
   position: relative;
@@ -204,7 +202,6 @@ a:focus-visible {
 }
 
 
-/* WHERE */
 
 .location-box {
   position: absolute;
@@ -243,8 +240,6 @@ a:focus-visible {
 }
 
 
-/* DATE */
-
 .date-box {
   position: absolute;
   left: 40%;
@@ -253,9 +248,6 @@ a:focus-visible {
 }
 
 
-/* =========================
-   TRAVEL TIME
-========================= */
 
 .travel-box {
   position: absolute;
@@ -277,7 +269,7 @@ a:focus-visible {
 }
 
 
-/* slider */
+
 
 .travel-box input[type="range"] {
   display: block;
@@ -296,8 +288,6 @@ a:focus-visible {
   background: #f4f7e9;
 }
 
-
-/* slider circle */
 
 .travel-box input[type="range"]::-webkit-slider-thumb {
   width: 10px;
@@ -325,8 +315,6 @@ a:focus-visible {
 }
 
 
-/* 30m / 1h / etc */
-
 .time-labels {
   display: flex;
   justify-content: space-between;
@@ -339,10 +327,6 @@ a:focus-visible {
   color: #f3f7df;
 }
 
-
-/* =========================
-   PERSON
-========================= */
 
 .person-box {
   position: absolute;
@@ -368,9 +352,6 @@ a:focus-visible {
   align-items: center;
 }
 
-
-/* your transparent PNG */
-
 .person-icon {
   display: block;
 
@@ -383,8 +364,6 @@ a:focus-visible {
   z-index: 2;
 }
 
-
-/* star */
 
 .star {
   display: flex;
@@ -413,8 +392,6 @@ a:focus-visible {
 }
 
 
-/* number inside star */
-
 .star input {
   width: 20px;
 
@@ -442,10 +419,6 @@ a:focus-visible {
 }
 
 
-/* =========================
-   SEARCH BUTTON
-========================= */
-
 .search-button {
   position: absolute;
 
@@ -464,9 +437,6 @@ a:focus-visible {
 
   cursor: pointer;
 }
-
-
-/* magnifying glass */
 
 .search-icon {
   position: absolute;
@@ -500,10 +470,6 @@ a:focus-visible {
   transform-origin: left center;
 }
 
-
-/* =========================
-   MOBILE
-========================= */
 
 @media (max-width: 700px) {
 
@@ -543,7 +509,7 @@ a:focus-visible {
   width: 100%;
   height: 600px;
 
-  background-image: url("coast.jpg");
+  background-image: url("coast2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
