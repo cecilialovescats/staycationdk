@@ -437,24 +437,414 @@ a:focus-visible {
 
 @media (max-width: 700px) {
 
-  .search-box {
-    grid-template-columns: 1fr;
+  * {
+  box-sizing: border-box;
+}
 
-    grid-template-areas:
-      "where"
-      "when"
-      "travel"
-      "people"
-      "search";
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-    gap: 18px;
+
+/* =====================================
+   WHOLE BLUE SECTION
+===================================== */
+
+.search-panel {
+  position: relative;
+
+  width: 100%;
+  height: 140px;
+
+  background: #cbd7e4;
+
+  color: #555;
+}
+
+
+/* =====================================
+   LOCATION
+===================================== */
+
+.location-box {
+  position: absolute;
+
+  left: 2.5%;
+  top: 10px;
+
+  width: 18%;
+}
+
+.location-box label {
+  display: block;
+
+  margin-left: 4px;
+  margin-bottom: 4px;
+
+  font-size: 10px;
+  color: #555;
+}
+
+.location-box input {
+  width: 100%;
+  height: 27px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 13px;
+
+  background: rgba(255, 255, 255, 0.58);
+
+  padding: 0 12px;
+
+  font-size: 8px;
+  color: #555;
+}
+
+.location-box input::placeholder {
+  color: #777;
+}
+
+
+/* =====================================
+   DATE
+===================================== */
+
+.date-box {
+  position: absolute;
+
+  left: 40%;
+  top: 10px;
+
+  width: 21%;
+}
+
+.date-box label {
+  display: block;
+
+  margin-left: 4px;
+  margin-bottom: 4px;
+
+  font-size: 10px;
+  color: #555;
+}
+
+.date-box input {
+  width: 100%;
+  height: 27px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 13px;
+
+  background: rgba(255, 255, 255, 0.58);
+
+  padding: 0 12px;
+
+  font-size: 8px;
+  color: #555;
+}
+
+.date-box input::placeholder {
+  color: #777;
+}
+
+
+/* =====================================
+   TRAVEL SLIDER
+===================================== */
+
+.travel-box {
+  position: absolute;
+
+  left: 9%;
+  top: 64px;
+
+  width: 41%;
+}
+
+.travel-title {
+  text-align: center;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  margin-bottom: 5px;
+}
+
+
+/* RANGE TRACK */
+
+.travel-box input[type="range"] {
+  display: block;
+
+  width: 100%;
+  height: 2px;
+
+  margin: 0;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  border: none;
+  outline: none;
+
+  background: #f4f7e9;
+}
+
+
+/* Chrome / Safari thumb */
+
+.travel-box input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  border: none;
+
+  background: #f2f3e8;
+
+  cursor: pointer;
+}
+
+
+/* Firefox thumb */
+
+.travel-box input[type="range"]::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  border: none;
+
+  background: #f2f3e8;
+
+  cursor: pointer;
+}
+
+
+/* TIME LABELS */
+
+.time-labels {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 5px 16px 0;
+
+  font-size: 14px;
+
+  color: #eff6dd;
+}
+
+
+/* =====================================
+   PERSON AREA
+===================================== */
+
+.person-box {
+  position: absolute;
+
+  left: 61%;
+  top: 63px;
+
+  width: 70px;
+}
+
+.person-label {
+  margin-left: 15px;
+  margin-bottom: -1px;
+
+  font-size: 7px;
+  color: #666;
+}
+
+.person-row {
+  display: flex;
+  align-items: center;
+}
+
+
+/* YOUR TRANSPARENT PERSON PNG */
+
+.person-icon {
+  width: 28px;
+  height: 37px;
+
+  object-fit: contain;
+
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =====================================
+   STAR
+===================================== */
+
+.star {
+  width: 35px;
+  height: 35px;
+
+  margin-left: -3px;
+
+  background: rgba(255, 255, 255, 0.55);
+
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 56%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 56%,
+    2% 35%,
+    39% 35%
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* NUMBER INSIDE STAR */
+
+.star input {
+  width: 22px;
+
+  padding: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  text-align: center;
+
+  font-size: 14px;
+  color: #555;
+}
+
+
+/* remove number arrows */
+
+.star input::-webkit-inner-spin-button,
+.star input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.star input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
+/* =====================================
+   SEARCH CIRCLE
+===================================== */
+
+.search-button {
+  position: absolute;
+
+  right: 5.7%;
+  top: 24px;
+
+  width: 52px;
+  height: 52px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.55);
+
+  cursor: pointer;
+}
+
+
+/* MAGNIFYING GLASS */
+
+.search-icon {
+  position: absolute;
+
+  width: 25px;
+  height: 25px;
+
+  left: 12px;
+  top: 10px;
+
+  border: 3px solid #aaa;
+  border-radius: 50%;
+}
+
+
+/* handle */
+
+.search-icon::after {
+  content: "";
+
+  position: absolute;
+
+  width: 15px;
+  height: 3px;
+
+  right: -11px;
+  bottom: -7px;
+
+  background: #aaa;
+
+  border-radius: 2px;
+
+  transform: rotate(45deg);
+  transform-origin: left center;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 700px) {
+
+  .search-panel {
+    height: 300px;
   }
 
-  .travel {
-    width: 100%;
+  .location-box {
+    left: 5%;
+    top: 15px;
+    width: 42%;
+  }
+
+  .date-box {
+    left: 53%;
+    top: 15px;
+    width: 42%;
+  }
+
+  .travel-box {
+    left: 8%;
+    top: 90px;
+    width: 84%;
+  }
+
+  .person-box {
+    left: 35%;
+    top: 175px;
   }
 
   .search-button {
-    justify-self: center;
+    right: 30%;
+    top: 180px;
   }
 }
