@@ -127,32 +127,6 @@ p {
   .hero p {
     font-size: 18px;
   }
-
-main > section:first-child {
-  padding-top: 70px;
-  padding-bottom: 70px;
-
-  background-color: #b8cbb0;
-}
-
-main > section:first-child > a {
-  display: inline-block;
-
-  margin-top: 15px;
-  padding: 12px 24px;
-
-  border-radius: 25px;
-
-  background-color: #fffde3;
-  color: #29342a;
-
-  text-decoration: none;
-}
-
-main > section:first-child > a:hover {
-  background-color: #d2e9c4;
-}
-
 .cards {
   display: flex;
   flex-direction: row;
