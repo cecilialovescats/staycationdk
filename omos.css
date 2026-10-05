@@ -85,38 +85,6 @@ p {
 }
 
 
-
-
-
-main > section:first-child {
-  padding-top: 70px;
-  padding-bottom: 70px;
-
-  background-color: #b8cbb0;
-}
-
-main > section:first-child > a {
-  display: inline-block;
-
-  margin-top: 15px;
-  padding: 12px 24px;
-
-  border-radius: 25px;
-
-  background-color: #fffde3;
-  color: #29342a;
-
-  text-decoration: none;
-}
-
-main > section:first-child > a:hover {
-  background-color: #d2e9c4;
-}
-
-
-
-
-
 footer {
   padding: 25px 6%;
 
@@ -131,11 +99,6 @@ footer {
 a:focus-visible {
   outline: 3px solid #476a39;
   outline-offset: 5px;
-}
-.my-photo {
-  width: 300px;
-  height: 150px;
-  object-fit: contain;
 }
 
 
