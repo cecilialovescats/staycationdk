@@ -428,7 +428,6 @@ footer {
   font-family: "Courier New", monospace;
   font-size: 14px;
 }
-
 a:focus-visible {
   outline: 5px solid #476a39;
   outline-offset: 5px;
