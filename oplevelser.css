@@ -102,40 +102,10 @@ p {
 
 
 
-main > section:first-child {
-  padding-top: 70px;
-  padding-bottom: 70px;
-
-  background-color: #b8cbb0;
-}
-
-main > section:first-child > a {
-  display: inline-block;
-
-  margin-top: 15px;
-  padding: 12px 24px;
-
-  border-radius: 25px;
-
-  background-color: #fffde3;
-  color: #29342a;
-
-  text-decoration: none;
-}
-
-main > section:first-child > a:hover {
-  background-color: #d2e9c4;
-}
-
-
-
-#om-os {
-  background-color: #eef4e7;
-}
 
 .travel-time {
-  width: 450px;
-  min-height: 200px;
+  width: 300px;
+  min-height: 1500px;
   padding: 30px 60px;
 
   background-color: #d2e9c4;
