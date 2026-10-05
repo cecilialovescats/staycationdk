@@ -104,8 +104,8 @@ p {
 
 
 .travel-time {
-  width: 200px;
-  min-height: 150px;
+  width: 100%;
+  min-height: 400px;
   padding: 30px 60px;
 
   background-color: #d2e9c4;
