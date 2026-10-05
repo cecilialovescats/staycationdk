@@ -135,7 +135,7 @@ main > section:first-child > a:hover {
 
 .travel-time {
   width: 450px;
-  min-height: 400px;
+  min-height: 200px;
   padding: 30px 60px;
 
   background-color: #d2e9c4;
