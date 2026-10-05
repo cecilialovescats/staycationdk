@@ -30,7 +30,7 @@ header {
 header > a {
   color: #29342a;
   font-family: "Courier New", monospace;
-  font-size: 24px;
+  font-size: 30px;
   text-decoration: none;
 }
 
@@ -115,11 +115,6 @@ main > section:first-child > a:hover {
 
 
 
-#om-os {
-  background-color: #eef4e7;
-}
-
-
 
 
 footer {
@@ -137,7 +132,11 @@ a:focus-visible {
   outline: 3px solid #476a39;
   outline-offset: 5px;
 }
-
+.my-photo {
+  width: 200px;
+  height: 50px;
+  object-fit: contain;
+}
 
 
 @media (max-width: 400px) {
@@ -159,8 +158,4 @@ a:focus-visible {
     padding: 35px 6%;
   }
 
-.my-photo {
-  width: 200px;
-  height: 50px;
-  object-fit: contain;
-}
+
